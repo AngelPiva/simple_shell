@@ -5,6 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 
-char **save_tok(char *buffer, char sep);
+char **split_str(char *str, char sep);
+void free_array(char **arr);
 
 #endif

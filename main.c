@@ -22,13 +22,16 @@ int main(void)
 		chars = getline(&buffer, &size, stdin);
 		if (chars == -1)
 			break;
-		array = save_tok(buffer, ' ');
+		buffer[chars - 1] = 0;
+		array = split_str(buffer, ' ');
+		free(buffer);
 		run = 0;
 		while (array[run])
 		{
 			printf("<%s>\n", array[run]);
 			run++;
 		}
+		free_array(array);
 	}
 	return (0);
 }
