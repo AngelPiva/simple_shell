@@ -8,12 +8,11 @@
 
 int main(void)
 {
-	char *buffer;
-	char **array;
-	size_t size;
+	char *buffer = NULL;
+	char **array = NULL;
+	size_t size = 0;
 	ssize_t chars = 0;
 	int inte = 1;
-	int run = 0;
 
 
 	while (inte)
@@ -24,14 +23,9 @@ int main(void)
 			break;
 		buffer[chars - 1] = 0;
 		array = split_str(buffer, ' ');
-		free(buffer);
-		run = 0;
-		while (array[run])
-		{
-			printf("<%s>\n", array[run]);
-			run++;
-		}
 		free_array(array);
 	}
+	if (buffer)
+		free(buffer);
 	return (0);
 }
