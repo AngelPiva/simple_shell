@@ -7,5 +7,7 @@
 
 char **split_str(char *str, char sep);
 void free_array(char **arr);
+char *_strdup(const char *s);
+char *_getenv(const char *name);
 
 #endif
