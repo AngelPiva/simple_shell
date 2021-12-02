@@ -8,10 +8,14 @@
  */
 char **split_str(char *str, char sep)
 {
-	char **out;
-	char *token, *cpy;
+	char **out = NULL;
+	char *token = NULL, *cpy = NULL;
 	int amnt = 1, c;
+	char sep_s[3];
 
+	sep_s[0] = sep;
+	sep_s[1] = '\t';
+	sep_s[2] = '\0';
 
 	for (c = 0; str[c]; c++)
 	{
@@ -29,11 +33,11 @@ char **split_str(char *str, char sep)
 		return (NULL);
 	}
 	out[amnt] = NULL;
-	token = strtok(cpy, " ");
-	for (c = 0; c < amnt; c++)
+	token = strtok(cpy, sep_s);
+	for (c = 0; token; c++)
 	{
 		out[c] = _strdup(token);
-		token = strtok(NULL, " ");
+		token = strtok(NULL, sep_s);
 	}
 	free(cpy);
 	return (out);
