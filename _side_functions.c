@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * free_array - frees an array of strings
  * @arr: array
