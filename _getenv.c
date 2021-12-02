@@ -8,9 +8,9 @@
 
 char *_getenv(const char *name)
 {
-	int n = 0, run = 0;
+	int n = 0;
 	int size = 0;
-	char *str = NULL;
+	char *str = NULL, *token = NULL;
 
 	while (name[size])
 		size++;
@@ -20,12 +20,9 @@ char *_getenv(const char *name)
 		if (strncmp(name, environ[n], size) == 0)
 		{
 			str = _strdup(environ[n]);
-			while (str[run] != '=')
-			{
-				run++;
-				++str;
-			}
-			return (str + 3);
+			token = strtok(str, "=");
+			token = strtok(NULL, "=");
+			return (token);
 		}
 		n++;
 	}

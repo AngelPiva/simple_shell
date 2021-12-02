@@ -6,7 +6,7 @@
  */
 void free_array(char **arr)
 {
-	int a;
+	int a = 0;
 
 	if (!arr)
 		return;

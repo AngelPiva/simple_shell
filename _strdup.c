@@ -6,7 +6,7 @@
  */
 char *_strdup(const char *s)
 {
-	char *z;
+	char *z = '\0';
 	int a;
 
 	if (!s)
