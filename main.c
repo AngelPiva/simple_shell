@@ -8,12 +8,11 @@
 
 int main(void)
 {
-	char *buffer = '\0', *c = NULL;
+	char *buffer = '\0';
 	char **array = NULL;
 	size_t size = 0;
 	ssize_t chars = 0;
 	int inte = 1;
-	char *exit = "exit", *env = "env";
 
 	while (inte)
 	{
