@@ -34,6 +34,7 @@ char *_getenv(const char *name)
 	{
 		found = 0;
 		for (s = 0; name[s]; s++)
+		{
 			if (name[s] != environ[c][s])
 			{
 				found = 1;
@@ -41,6 +42,7 @@ char *_getenv(const char *name)
 			}
 			if (!found)
 			break;
+		}
 	}
 	if (!environ[c])
 		return (NULL);
