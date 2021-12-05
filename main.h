@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/wait.h>
+#include <signal.h>
 
 char **split_str(char *str, char sep);
 void _free_array(char **arr);
@@ -14,5 +16,6 @@ int built_ins(char *buffer);
 extern char **environ;
 int _strncmp(char *s1, char *s2, size_t n);
 int _strlen(char *s);
+int execute(char *cmnd, char **args);
 
 #endif
