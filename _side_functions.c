@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * free_array - frees an array of strings
+ * _free_array - frees an array of strings
  * @arr: array
  */
-void free_array(char **arr)
+void _free_array(char **arr)
 {
 	int a;
 
@@ -47,26 +47,23 @@ char *_strdup(const char *s)
 
 char *_getenv(const char *name)
 {
-	int n = 0, run = 0;
-	int size = 0;
-	char *str = NULL;
+	int c, s, found;
 
-	while (name[size])
-		size++;
-
-	while (environ[n])
+	if (!name)
+		return (NULL);
+	for (c = 0; environ[c]; c++)
 	{
-		if (strncmp(name, environ[n], size) == 0)
-		{
-			str = _strdup(environ[n]);
-			while (str[run] != '=')
+		found = 0;
+		for (s = 0; name[s]; s++)
+			if (name[s] != environ[c][s])
 			{
-				run++;
-				++str;
+				found = 1;
+				break;
 			}
-			return (str + 3);
-		}
-		n++;
+		if (!found)
+			break;
 	}
-	return (0);
+	if (!environ[c])
+		return (NULL);
+	return (environ[c] + (s + 1));
 }

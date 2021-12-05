@@ -24,7 +24,7 @@ int main(void)
 			break;
 		buffer[chars - 1] = 0;
 		array = split_str(buffer, ' ');
-		free_array(array);
+		_free_array(array);
 	}
 	if (buffer)
 		free(buffer);
