@@ -23,12 +23,12 @@ int main(__attribute__ ((unused))int argc, char **argv)
 	char **array = NULL;
 	size_t size = 0;
 	ssize_t chars = 0;
-	int inte = 1;
+	int inte = 1, status;
 
 	signal(SIGINT, INTERRUPT_MANAGER);
 	while (inte)
 	{
-		inte = isatty(0);
+		inte = isatty(0), status = 0;
 		if (inte)
 			write(1, "$ ", 2);
 		chars = getline(&buffer, &size, stdin);
@@ -42,8 +42,10 @@ int main(__attribute__ ((unused))int argc, char **argv)
 		if (!array)
 			continue;
 		if (array[0])
-			search(array, argv[0]);
+			status = search(array, argv[0]);
 		_free_array(array);
+		if (status == -1)
+			break;
 	}
 	if (buffer)
 		free(buffer);

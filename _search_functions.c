@@ -13,13 +13,13 @@ int search(char **args, char *shell_name)
 	int status;
 
 	status = search_built_in(args, shell_name);
-	if (!status)
+	if (status != 1)
 		return (status);
 	status = search_path(args);
-	if (!status)
+	if (status != 1)
 		return (status);
 	status = search_executable(args);
-	if (!status)
+	if (status != 1)
 		return (status);
 	perror(shell_name);
 	return (status);
@@ -104,12 +104,39 @@ int search_path(char **args)
 /**
  * search_built_in - searches for a built-in
  * @args: argv
- * @shell_name: name of the shell
+ * @shell_name: name of my shell
  * Return: staus
  */
 int search_built_in(char **args, char *shell_name)
 {
-	(void)args;
-	(void)shell_name;
+	int c, s, found;
+
+	char *builtins[] = {
+		"exit",
+		"cd",
+		"env",
+		NULL};
+	for (c = 0; builtins[c]; c++)
+	{
+		found = 0;
+		for (s = 0; args[0][s]; s++)
+			if (args[0][s] != builtins[c][s] || !builtins[c][s])
+			{
+				found = 1;
+				break;
+			}
+		if (!found)
+			break;
+	}
+	switch (c)
+	{
+		case 0:
+			return (-1);
+		case 1:
+			return (_cd(args, shell_name));
+		case 2:
+			_printenv();
+			return (0);
+	}
 	return (1);
 }
