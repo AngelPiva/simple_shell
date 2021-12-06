@@ -11,11 +11,9 @@ char **split_str(char *str, char sep)
 	char **out = NULL;
 	char *token = NULL, *cpy = NULL;
 	int amnt = 1, c;
-	char sep_s[3];
+	char sep_s[2] = ".";
 
 	sep_s[0] = sep;
-	sep_s[1] = '\t';
-	sep_s[2] = '\0';
 
 	for (c = 0; str[c]; c++)
 	{

@@ -36,6 +36,7 @@ char *_strdup(const char *s)
 		return (NULL);
 	for (a = 0; s[a]; a++)
 		z[a] = s[a];
+	z[a] = 0;
 	return (z);
 }
 
