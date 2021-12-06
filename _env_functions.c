@@ -40,9 +40,9 @@ char *_getenv(const char *name)
 				found = 1;
 				break;
 			}
-			if (!found)
-			break;
 		}
+		if (!found)
+			break;
 	}
 	if (!environ[c])
 		return (NULL);

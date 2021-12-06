@@ -18,8 +18,10 @@ extern char **environ;
 int _strncmp(char *s1, char *s2, size_t n);
 int _strlen(char *s);
 int execute(char *cmnd, char **args);
-int search_executable(char **args, char *shell_name);
-int search_path(char **args, char *shell_name);
+int search_executable(char **args);
+int search_path(char **args);
 int search_built_in(char **args, char *shell_name);
+int search(char **args, char *shell_name);
+
 
 #endif

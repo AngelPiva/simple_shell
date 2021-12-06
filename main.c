@@ -23,21 +23,26 @@ int main(__attribute__ ((unused))int argc, char **argv)
 	char **array = NULL;
 	size_t size = 0;
 	ssize_t chars = 0;
-	int inte = 1, status;
+	int inte = 1;
 
 	signal(SIGINT, INTERRUPT_MANAGER);
 	while (inte)
 	{
-		(void)argv;
 		inte = isatty(0);
 		if (inte)
 			write(1, "$ ", 2);
 		chars = getline(&buffer, &size, stdin);
 		if (chars == -1)
 			break;
-		buffer[chars - 1] = 0;
+		if (buffer[chars - 1] == '\n')
+			buffer[chars - 1] = 0;
+		if (buffer[0] == 0)
+			continue;
 		array = split_str(buffer, ' ');
-		status = search(array, argv[0]);
+		if (!array)
+			continue;
+		if (array[0])
+			search(array, argv[0]);
 		_free_array(array);
 	}
 	if (buffer)
@@ -45,29 +50,4 @@ int main(__attribute__ ((unused))int argc, char **argv)
 	if (inte)
 		write(1, "\n", 1);
 	return (0);
-}
-
-/**
- * search - searches for the command
- * @args: array of strings
- * @shell_name: name of my shell
- * Return: status
- */
-
-int search(char **args, char *shell_name)
-{
-	int status;
-
-	status = search_built_in(args, shell_name);
-	if (!status)
-		return (status);
-	status = search_path(args, shell_name);
-	if (!status)
-		return (status);
-	status = search_executable(args, shell_name);
-	if (!status)
-		return (status);
-	perror(shell_name);
-	perror("1: no such file or directory\n");
-	return (status);
 }

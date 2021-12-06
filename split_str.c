@@ -21,6 +21,8 @@ char **split_str(char *str, char sep)
 			if (str[c + 1] != sep && str[c + 1])
 				amnt++;
 	}
+	if (!amnt)
+		return (NULL);
 	cpy = _strdup(str);
 	if (!cpy)
 		return (NULL);
