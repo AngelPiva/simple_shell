@@ -1,10 +1,51 @@
-% hsh(1) - shs Shell man page
-% Manuela Ríos Sosa | Ángel Piva
-% December 2021
+<h1>hsh(1) - shs Shell man page</h1>
+<h3>Manuela Ríos Sosa | Ángel Piva</h3>
+<h4>December 2021</h4>
 
-# NAME
-hsh - shell, command language interpreter
+# <h2>PROLOG</h2>
+	
 
-# SYNOPSIS
+# <h2>NAME</h2>
+	<p>hsh - shell, command language interpreter</p>
 
-# DESCRIPTION
+# <h2>SYNOPSIS</h2>
+
+# <h2>DESCRIPTION</h2>
+
+# <h2>OPTIONS</h2>
+
+# <h2>OPERANDS</h2>
+
+# <h2>STDIN</h2>
+
+# <h2>INPUT FILES</h2>
+
+# <h2>ENVIRONMENT VARIABLES</h2>
+
+# <h2>ASYNCHRONOUS EVENTS</h2>
+
+# <h2>STDOUT</h2>
+
+# <h2>STDERR</h2>
+
+# <h2>OUTPUT FILES</h2>
+
+# <h2>EXTENDED DESCRIPTION</h2>
+
+# <h2>EXIT STATUS</h2>
+
+# <h2>CONSEQUENCES OF ERRORS</h2>
+
+# <h2>APPLICATION USAGE</h2>
+
+# <h2>EXAMPLES</h2>
+
+# <h2>RATIONALE</h2>
+
+# <h2>FUTURE DIRECTIONS</h2>
+
+# <h2>SEE ALSO</h2>
+
+# <h2>COPYRIGHT</h2>
+
+
