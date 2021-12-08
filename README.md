@@ -9,7 +9,7 @@ It is a command language interpreter that executes commands it reads from the st
 
 For this project we had to recreate how the Unix Shell works, and be able to make our own Shell based on it.
 
-***
+---
 
 <p align="center">
  By Manuela Ríos Sosa and Ángel Piva
