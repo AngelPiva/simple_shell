@@ -44,9 +44,13 @@ int separate(char *buffer, char *shell_name)
 			}
 			if (args)
 				free(args);
+			if (status == -1)
+				break;
 		}
 		if (semicolons)
 			free(semicolons);
+		if (status == -1)
+			break;
 	}
 	if (times)
 		free(times);
@@ -86,7 +90,7 @@ int main(__attribute__ ((unused))int argc, char **argv)
 			buffer[chars - 1] = 0;
 		if (buffer[0] == 0)
 			continue;
-		separate(buffer, argv[0]);
+		status = separate(buffer, argv[0]);
 		if (buffer)
 		if (status == -1)
 			break;

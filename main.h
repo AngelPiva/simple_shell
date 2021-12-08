@@ -24,5 +24,6 @@ int search_built_in(char **args, char *shell_name);
 int search(char **args, char *shell_name);
 int _cd(char **args, char *shell_name);
 char *cmnd_concat(char *path, char *cmnd);
-
+/* VARIABLE GLOBAL */
+int exit_status;
 #endif
