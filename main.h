@@ -23,6 +23,6 @@ int search_path(char **args);
 int search_built_in(char **args, char *shell_name);
 int search(char **args, char *shell_name);
 int _cd(char **args, char *shell_name);
-
+char *cmnd_concat(char *path, char *cmnd);
 
 #endif

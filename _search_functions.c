@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 /**
  * search - searches for the command
  * @args: array of strings
@@ -40,31 +39,6 @@ int search_executable(char **args)
 		return (1);
 	exit_status = execute(args[0], args);
 	return (exit_status);
-}
-
-/**
- * cmnd_concat - concatenates 2 strs for path
- * @path: path of file
- * @cmnd: command to search
- * Return: "<path>/<cmnd>"
- */
-char *cmnd_concat(char *path, char *cmnd)
-{
-	char *out;
-	int c, s;
-
-	if (!path || !cmnd)
-		return (NULL);
-	out = malloc(strlen(path) + strlen(cmnd) + 2);
-	if (!out)
-		return (NULL);
-	for (c = 0; path[c]; c++)
-		out[c] = path[c];
-	out[c] = '/';
-	for (s = 0; cmnd[s]; s++)
-		out[c + (s + 1)] = cmnd[s];
-	out[c + (s + 1)] = 0;
-	return (out);
 }
 
 /**

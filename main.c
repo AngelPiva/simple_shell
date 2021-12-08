@@ -61,7 +61,7 @@ int separate(char *buffer, char *shell_name)
  */
 int main(__attribute__ ((unused))int argc, char **argv)
 {
-	char *buffer;
+	char *buffer = NULL;
 	size_t size = 0;
 	ssize_t chars = 0;
 	int inte = 1, status;
@@ -88,15 +88,10 @@ int main(__attribute__ ((unused))int argc, char **argv)
 			continue;
 		separate(buffer, argv[0]);
 		if (buffer)
-			free(buffer);
 		if (status == -1)
 			break;
 	}
-	if (!inte)
-	{
-		if (buffer)
-			free(buffer);
-	}
+	free(buffer);
 	if (inte)
 		write(1, "\n", 1);
 	return (0);
