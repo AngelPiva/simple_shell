@@ -1,4 +1,7 @@
-#Simple Shell
+<h1 align="center">Simple Shell</h1>
+</div>
+<!-- ABOUT -->
+
 
 This programm was created as the end of trimester project.
 
