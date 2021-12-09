@@ -37,7 +37,7 @@ This programm was created as the end of trimester project. It is a command langu
 	| main.c              | main               | signal                 | main.h     |
 	|                     |                    | write                  |            |
 	|                     |                    | malloc                 |            |
-        |                     |                    | isatty                 |            |
+	|                     |                    | isatty                 |            |
 	|                     |                    | getline                |            |
 	|                     |                    | read                   |            |
 	|                     |                    | free                   |            |
