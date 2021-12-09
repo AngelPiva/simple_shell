@@ -1,5 +1,4 @@
 #include "main.h"
-#include "string.h"
 
 /**
  * INTERRUPT_MANAGER - interrupts programm
