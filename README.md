@@ -116,6 +116,9 @@ root@d8524d64916d:~/simple_shell#
 	* separate: parses a string
 	* main: main function of the programm
 	* split_str: splits string
+
+## Other Files
+
 * main.h: header
 * AUTHORS: contributors
 * man_1_simple_shell: manual
