@@ -98,6 +98,28 @@ $ exit
 root@d8524d64916d:~/simple_shell#
 ```
 
+## Functions Description
+	* _printenv: prints all the environment variables
+	* _getenv: gets an environment variable
+	* _cd: change directory
+	* search: searches for the command
+	* search_executable: searches for executable
+	* search_path: searches for path
+	* search_built_in: searches for a built-in
+	* cmnd_concat: concatenates 2 strs for path
+	* _free_array: frees an array of strings
+	* _strdup: duplicates a string
+	* _strlen: returns the length of a string
+	* _strncmp: compares two strings
+	* execute: executes a programm
+	* INTERRUPT_MANAGER: interrupts programm
+	* separate: parses a string
+	* main: main function of the programm
+	* split_str: splits string
+* main.h: header
+* AUTHORS: contributors
+* man_1_simple_shell: manual
+
 ## Staff
 	Manuela Ríos Sosa - 3954@holbertonschool.com
 	Ángel Piva - 3965@holbertonschool.com
