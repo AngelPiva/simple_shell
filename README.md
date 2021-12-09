@@ -71,7 +71,7 @@ This programm was created as the end of trimester project. It is a command langu
 
 ## Example
 
-´´´
+```
 $ pwd
 /root/simple_shell
 $ mkdir new_dir
@@ -102,7 +102,7 @@ AUTHORS  _cd.c  _env_functions.c  execute.c  hsh  main.c  main.h  man_1_simple_s
 $ rmdir new_dir
 $ ls
 AUTHORS  _cd.c  _env_functions.c  execute.c  hsh  main.c  main.h  man_1_simple_shell  README.md  _search_functions.c  split_str.c  _str_functions.c  text
-´´´
+```
 
 ## Staff
 	Manuela Ríos Sosa - 3954@holbertonschool.com
