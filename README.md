@@ -61,7 +61,6 @@ This programm was created as the end of trimester project. It is a command langu
 	| README.md           |                    |                        |            |
 	|---------------------|--------------------|------------------------|------------|
 	| man_1_simple_shell  |                    |                        |            |
-	|---------------------|--------------------|------------------------|------------|
 
 ## Features
 	* PATH
