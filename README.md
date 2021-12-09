@@ -68,6 +68,7 @@ This programm was created as the end of trimester project. It is a command langu
 		* env
 		* exit
 	* Command line arguments
+	* Semicolon separator
 
 ## Example
 
@@ -118,10 +119,9 @@ root@d8524d64916d:~/simple_shell#
 	* split_str: splits string
 
 ## Other Files
-
-* main.h: header
-* AUTHORS: contributors
-* man_1_simple_shell: manual
+	* main.h: header
+	* AUTHORS: contributors
+	* man_1_simple_shell: manual
 
 ## Staff
 	Manuela Ríos Sosa - 3954@holbertonschool.com
