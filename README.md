@@ -72,36 +72,30 @@ This programm was created as the end of trimester project. It is a command langu
 ## Example
 
 ```
+root@d8524d64916d:~/simple_shell# ./hsh
 $ pwd
 /root/simple_shell
+$ ls
+AUTHORS  _cd.c  _env_functions.c  execute.c  hsh  main.c  main.h  man_1_simple_shell  README.md  _search_functions.c  split_str.c  _str_functions.c  text
 $ mkdir new_dir
 $ ls
-AUTHORS  _env_functions.c  hsh   main.c  man_1_simple_shell  README.md            split_str.c       text
-_cd.c    execute.c         hsh}  main.h  new_dir             _search_functions.c  _str_functions.c
-$ cd new_dir
-$ vi hello
-$ ls
-hello
-$ cd ..
-$ ls
-AUTHORS  _env_functions.c  hsh   main.c  man_1_simple_shell  README.md            split_str.c       text
-_cd.c    execute.c         hsh}  main.h  new_dir             _search_functions.c  _str_functions.c
-$ rmdir new_dir
-rmdir: failed to remove 'new_dir': Directory not empty
+AUTHORS  _cd.c  _env_functions.c  execute.c  hsh  main.c  main.h  man_1_simple_shell  new_dir  README.md  _search_functions.c  split_str.c  _str_functions.c  text
 $ cd new_dir
 $ ls
-hello
-$ rm hello
-$ cd ..
+$ vi new.file
+$ cat new.file
+Hello!
+$ rm new.file
 $ ls
-AUTHORS  _env_functions.c  hsh   main.c  man_1_simple_shell  README.md            split_str.c       text
-_cd.c    execute.c         hsh}  main.h  new_dir             _search_functions.c  _str_functions.c
-$ rm hsh}
+$ cd ..
 $ ls
 AUTHORS  _cd.c  _env_functions.c  execute.c  hsh  main.c  main.h  man_1_simple_shell  new_dir  README.md  _search_functions.c  split_str.c  _str_functions.c  text
 $ rmdir new_dir
 $ ls
 AUTHORS  _cd.c  _env_functions.c  execute.c  hsh  main.c  main.h  man_1_simple_shell  README.md  _search_functions.c  split_str.c  _str_functions.c  text
+$ exit
+
+root@d8524d64916d:~/simple_shell#
 ```
 
 ## Staff
